@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, menuItems }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,27 +25,20 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle="Welcome to my sandbox" />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+        <Header menuItems={menuItems} />
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()}, Anand Poolla - Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
     </>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
+    menuItems: PropTypes.array
 }
 
 export default Layout

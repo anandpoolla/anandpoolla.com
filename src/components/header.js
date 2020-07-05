@@ -1,42 +1,31 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import PropTypes, {string} from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = ({ menuItems }) => (
+    <header>
+        <div>
+            <h1 style={{ margin: 0 }}>
+                <Link id="brand" to="/">
+                    {/*<img src="https://placekitten.com/50/50" alt="icon" width="50" height="50"/>*/}
+                    &#127798; Anand Poolla
+                </Link>
+            </h1>
+        </div>
+        <div>
+            {menuItems.map((menu, key) =>
+                <Link key={key} to={"/" + menu}>{menu}</Link>)
+            }
+        </div>
+    </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  menuItems: PropTypes.array
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  menuItems: ["about", "food", "tech"]
 }
 
 export default Header

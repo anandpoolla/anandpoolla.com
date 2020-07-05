@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout menuItems={[]}>
     <SEO title="Home" />
     <h1>Coming soon...</h1>
   </Layout>
