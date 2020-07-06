@@ -1,0 +1,3 @@
+[submodule "blogposts"]
+	path = blogposts
+	url = https://github.com/anandpoolla/blogposts
