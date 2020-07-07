@@ -28,9 +28,11 @@ const Layout = ({ children, menuItems }) => {
         <Header menuItems={menuItems} />
         <main>{children}</main>
         <footer>
+          <div>
             © {new Date().getFullYear()}, Anand Poolla - Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </div>
         </footer>
     </>
   )
