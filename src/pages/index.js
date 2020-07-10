@@ -36,13 +36,6 @@ const IndexPage = () => (
         <li>Netlify - free hosting service of single page applications that works directly with your repository</li>
       </ul>
     </p>
-
-    <h2>Acknowledgements</h2>
-    <p>
-      This site was built with the help of giants! I am most (and mostly) thankful to Tania Rascia for her insights,
-      guides and inspiration. If this guide was helpful to you, feel free to send me a note and if you want to support
-      me, please consider buying Tania a <a href="https://ko-fi.com/taniarascia">coffee</a>.
-    </p>
   </Layout>
 )
 
