@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Anand Poolla`,
-    description: `Welcome to my personal website build on Gatsby, React and Netlify`,
+    description: `Welcome to my personal website built with Gatsby, React and Node`,
     author: `@anandpoolla`
   },
   plugins: [
@@ -24,12 +24,24 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#33dd88`,
         display: `minimal-ui`,
-        icon: `src/images/hot-pepper.png` // This path is relative to the root of the site.
+        icon: `src/images/hot-pepper.png`
       }
     },
-    `gatsby-transformer-remark`
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/`
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-79914818-1`,
+        head: true,
+        anonymize: true
+      },
+    }
   ]
 }

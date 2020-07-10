@@ -5,6 +5,7 @@ html {
 body {
     font-family: Montserrat, sans-serif;
     color: #444444;
+    line-height: 2;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
     justify-content: space-between;
     height: 5rem;
     border-bottom-style: solid;
-    border-bottom-color: #d1d1d1;
+    border-bottom-color: #eee;
     border-bottom-width: thin;
 }
 
@@ -27,7 +28,7 @@ footer {
     justify-content: left;
     padding: 1rem;
     border-top-style: solid;
-    border-top-color: #d1d1d1;
+    border-top-color: #eee;
     border-top-width: thin;
 }
 
@@ -46,4 +47,14 @@ footer a {
 #brand {
     color: #444444;
     text-decoration: none;
+}
+
+code {
+    background-color: lightgray;
+    font-family: "IBM Plex Mono";
+    padding: 0.5rem;
+}
+
+.tech-post {
+
 }

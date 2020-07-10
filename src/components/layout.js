@@ -29,9 +29,7 @@ const Layout = ({ children, menuItems }) => {
         <main>{children}</main>
         <footer>
           <div>
-            © {new Date().getFullYear()}, Anand Poolla - Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()}, Anand Poolla
           </div>
         </footer>
     </>
