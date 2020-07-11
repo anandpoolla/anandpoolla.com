@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: Montserrat, sans-serif;
+    font-size: 18px;
     color: #444444;
     line-height: 2;
 }
@@ -33,15 +34,11 @@ footer {
 }
 
 h1, h2, h3 {
-    font-family: Karla;
+    font-family: Karla, serif;
 }
 
-a {
+header a {
     padding: 1rem;
-}
-
-footer a {
-    padding: 0;
 }
 
 #brand {
@@ -51,7 +48,7 @@ footer a {
 
 code {
     background-color: lightgray;
-    font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono", monospace;
     padding: 0.5rem;
 }
 
