@@ -25,7 +25,7 @@ const IndexPage = () => (
 
     <h2>Guide</h2>
     <p>
-      Coming soon...<br/><br/>
+      <Link to="/build-this-gatsby-website">Build this Gatsby website</Link><br/><br/>
 
       This guide will be an evolving document as this site evolves; I will try and capture the timeline as I go along.
       This site is built primarily on these libraries and platforms:

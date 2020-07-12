@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#33dd88`,
         display: `minimal-ui`,
-        icon: `src/images/hot-pepper.png`
+        icon: `src/images/favicon.png`
       }
     },
     {
@@ -34,7 +34,26 @@ module.exports = {
         path: `${__dirname}/content/tech`
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {

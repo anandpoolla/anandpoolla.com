@@ -11,8 +11,6 @@ export default function TechTemplate({
     <Layout>
     <div className="tech-post-container">
       <div className="tech-post">
-        <h1>{frontmatter.title}</h1>
-        <h3>{frontmatter.date}</h3>
         <div
           className="tech-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
