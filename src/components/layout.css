@@ -38,24 +38,30 @@ h1, h2, h3 {
 }
 
 header a {
-    color: #999999;
+    color: #999;
     padding: 1rem;
     text-decoration: none;
     border-radius: 3px;
 }
 
+header a.child {
+    color: #444;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #eee;
+}
+
 #brand {
-    color: #444444;
+    color: #444;
     text-decoration: none;
 }
 
 code {
     font-family: "IBM Plex Mono", monospace;
     background-color: #eee;
-    padding-left: 0.5rem;
-    padding-top: 0.3rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.3rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 0.2rem;
 }
 
@@ -64,8 +70,7 @@ code {
 }
 
 img {
-    border: black;
-    border-width: thick;
+    border: solid thin #eee;
 }
 
 .gatsby-resp-image-wrapper {

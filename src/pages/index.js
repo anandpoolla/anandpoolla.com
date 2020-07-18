@@ -2,14 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout menuItems={["about", "food", "tech"]}>
+  <Layout
+    menuItems={[
+      { label: "about", to: "/about", class: "parent" },
+      { label: "food", to: "/food", class: "parent" },
+      { label: "tech", to: "/tech", class: "parent" }
+    ]}
+  >
     <SEO title="Home" />
     <h2>Welcome to my sandbox...</h2>
-    <p>
+    <div>
       I am a software engineer with a love for spicy food and technology. You will find both of them here!
 
       <br/><br/>
@@ -21,10 +26,10 @@ const IndexPage = () => (
         <li>Showcase my favorite foods and my cooking experiments</li>
         <li>Capture traditional, home-style recipes of South India that are woefully underrepresented outside</li>
       </ul>
-    </p>
+    </div>
 
     <h2>Guide</h2>
-    <p>
+    <div>
       <Link to="/build-this-gatsby-website">Build this Gatsby website</Link><br/><br/>
 
       This guide will be an evolving document as this site evolves; I will try and capture the timeline as I go along.
@@ -35,7 +40,7 @@ const IndexPage = () => (
         <li>Node - an asynchronous event-driven JavaScript runtime with a massive library of packages</li>
         <li>Netlify - hosting service for single page applications that works directly with your repository</li>
       </ul>
-    </p>
+    </div>
   </Layout>
 )
 

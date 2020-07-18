@@ -1,7 +1,7 @@
 {
   "name": "anandpoolla.com",
   "private": false,
-  "description": "My personal websitre built on Gatsby, React and Netlify",
+  "description": "My personal website built on Gatsby, React and Netlify",
   "version": "0.1.0",
   "author": "Anand Poolla <anandpoolla@gmail.com>",
   "dependencies": {
@@ -13,6 +13,7 @@
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-remark-images": "^3.3.18",
     "gatsby-source-filesystem": "^2.3.19",
     "gatsby-transformer-remark": "^2.8.25",

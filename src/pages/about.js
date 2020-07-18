@@ -3,10 +3,15 @@ import Layout from "../components/layout";
 
 export default function About() {
   return (
-    <Layout menuItems={[]}>
+    <Layout
+      menuItems={[
+        { label: "food", to: "/food", class: "parent" },
+        { label: "tech", to: "/tech", class: "parent" },
+        { label: "resume", to: "/about/resume", class: "child" }
+      ]}
+    >
       <h2>About me</h2>
-
-      <p>
+      <div>
         I was born in Secunderabad, Telangana State, India in 1977 and grew up moving all around the country and abroad.
         I moved to the United States in the year 2000 to study my Master's degree and have lived here since. I became a
         citizen of the United States in 2019.<br/><br/>
@@ -26,10 +31,12 @@ export default function About() {
         adventurous, especially so if I'm hosting guests.<br/><br/>
 
         My other interests are movies, music, books and DIY projects (I absolutely LOVE assembling furniture!)
-      </p>
+      </div>
 
       <h2>Contact</h2>
-      You can reach me at hello@anandpoolla.com
+      <div>
+        You can reach me at hello@anandpoolla.com
+      </div>
     </Layout>
   );
 }

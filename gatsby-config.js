@@ -19,10 +19,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Anand Poolla`,
-        short_name: `nandu`,
+        short_name: `Anand Poolla`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#33dd88`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`
       }
@@ -50,7 +48,8 @@ module.exports = {
             options: {
               maxWidth: 1024
             }
-          }
+          },
+          `gatsby-remark-autolink-headers`
         ]
       }
     },
