@@ -86,6 +86,45 @@ blockquote p {
     display: inline;
 }
 
+.ingredients {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: auto;
+}
+
+.ingredient {
+    border: solid thin #eee;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px .2em #eee;
+    padding: 0.3rem;
+}
+
+.ingredient-name {
+    padding: 0.3rem;
+    /*border-bottom: solid thin #ccc;*/
+    margin: 0.2rem;
+}
+
+.ingredient-symbols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredient-symbol {
+    /*background-color: #eee;*/
+    /*padding: 0rem 1rem;*/
+    /*border: solid thin #eee;*/
+    border-radius: 0.3rem;
+    /*margin: 0rem;*/
+    font-size: x-large;
+}
+
+.symbol-tag {
+    padding: 0rem 0.5rem;
+}
+
 /*
 PrismJS theme overrides
  */
