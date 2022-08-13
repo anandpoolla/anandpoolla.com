@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../../components/layout";
-import Chessboard from "chessboardjsx"
 
 export default function Pantry() {
   return (
@@ -13,13 +12,7 @@ export default function Pantry() {
     >
       <h1>Knight Moves</h1>
       <br/>
-      <Chessboard
-        onSquareClick={(square) => {
-          console.log(square, " clicked")
-        }}
-        onMouseOverSquare={(square) => console.log(square)}
 
-      />
     </Layout>
   );
 }
