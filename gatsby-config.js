@@ -110,18 +110,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `IBM Plex Mono`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Karla`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Montserrat`,
-            variants: [`400`, `700`]
-          },
+          `IBM Plex Mono\:400,700`,
+          `Karla\:400,700`,
+          `Montserrat|:400,700`
         ],
       },
     }
