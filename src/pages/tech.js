@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 
-export default function Tech() {
+export default function TechPage() {
     return (
         <Layout
           menuItems={[

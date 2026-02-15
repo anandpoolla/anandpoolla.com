@@ -2,17 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default function TechTemplate({
+export default function FoodTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-    <div className="tech-post-container">
-      <div className="tech-post">
+    <div className="food-post-container">
+      <div className="food-post">
         <div
-          className="tech-post-content"
+          className="food-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

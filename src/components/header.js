@@ -29,8 +29,6 @@ Header.defaultProps = {
     { label: "food", to: "/food", class: "parent" },
     { label: "tech", to: "/tech", class: "parent" }
   ]
-
-
 }
 
 export default Header

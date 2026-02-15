@@ -1,18 +1,21 @@
+const path = require(`path`)
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const techPostTemplate = require.resolve(`./src/templates/tech.js`)
+  const foodPostTemplate = path.resolve(`./src/templates/food.js`)
+  const techPostTemplate = path.resolve(`./src/templates/tech.js`)
 
   const result = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+    query {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
+            id
             frontmatter {
               slug
+              date(formatString: "MMMM DD, YYYY")
+              title
             }
           }
         }
@@ -26,13 +29,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(edge => {
+    console.log("====================")
+    console.log(edge.node.frontmatter.slug)
+    console.log("====================")
     createPage({
-      path: node.frontmatter.slug,
+      path: `${edge.node.frontmatter.slug}`,
       component: techPostTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.frontmatter.slug,
+        slug: edge.node.frontmatter.slug,
       },
     })
   })
