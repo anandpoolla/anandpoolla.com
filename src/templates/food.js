@@ -41,7 +41,7 @@ export default function FoodTemplate({
         { label: "food", to: "/food", class: "child" },
       ]}
     >
-      <div className="food-post-container">
+      <div className="food-page food-post-container">
         <div className="food-post">
           <FoodImage src={frontmatter.image} alt={frontmatter.title} />
           <h1 className="food-post-title">{frontmatter.title}</h1>

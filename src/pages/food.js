@@ -27,22 +27,24 @@ const  FoodPage = ({
           { label: "pantry", to: "/food/pantry", class: "child" }
         ]}
       >
-        <h1>Recipes</h1>
-        <input
-          type="search"
-          className="food-search"
-          placeholder="Search by ingredient…"
-          aria-label="Search recipes by ingredient"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-        />
-        {Posts.length > 0 ? (
-          <div className="food-tiles">
-            {Posts}
-          </div>
-        ) : (
-          <p className="food-search-empty">No recipes found with "{query}".</p>
-        )}
+        <div className="food-page">
+          <h1>Recipes</h1>
+          <input
+            type="search"
+            className="food-search"
+            placeholder="Search by ingredient…"
+            aria-label="Search recipes by ingredient"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+          />
+          {Posts.length > 0 ? (
+            <div className="food-tiles">
+              {Posts}
+            </div>
+          ) : (
+            <p className="food-search-empty">No recipes found with "{query}".</p>
+          )}
+        </div>
       </Layout>
     );
 }
