@@ -35,7 +35,7 @@ export default function About() {
 
       <h2>Contact</h2>
       <div>
-        You can reach me at hello@anandpoolla.com
+        You can reach me at <a href={"mailto:hello@anandpoolla.com"}>hello@anandpoolla.com</a>
       </div>
     </Layout>
   );

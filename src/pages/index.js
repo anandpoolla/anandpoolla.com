@@ -49,7 +49,7 @@ const IndexPage = () => (
       On the technology side, you will find a guide below. It lists the steps needed to build this website
       using the latest in web technologies, for free (except the domain name of course.)<br/><br/>
 
-      <Link to="/build-this-gatsby-website">Build this Gatsby website</Link><br/><br/>
+      <Link to="/tech/build-this-gatsby-website">Build this Gatsby website</Link><br/><br/>
 
       This guide will be an evolving document as this site evolves; I will try and capture the timeline as I go along.
       This site is built primarily on these libraries and platforms:

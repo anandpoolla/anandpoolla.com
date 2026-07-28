@@ -28,6 +28,9 @@
   "devDependencies": {
     "prettier": "^3.9.6"
   },
+  "overrides": {
+    "sanitize-html": "2.17.1"
+  },
   "keywords": [
     "gatsby"
   ],
