@@ -1,5 +1,22 @@
 const path = require(`path`)
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type Frontmatter {
+      slug: String
+      date: Date @dateformat
+      title: String
+      image: String
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+  `)
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
@@ -33,9 +50,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     console.log("====================")
     console.log(edge.node.frontmatter.slug)
     console.log("====================")
+    const isFoodPost = edge.node.frontmatter.slug.startsWith("/food/")
     createPage({
       path: `${edge.node.frontmatter.slug}`,
-      component: techPostTemplate,
+      component: isFoodPost ? foodPostTemplate : techPostTemplate,
       context: {
         // additional data can be passed via context
         id: edge.node.id,

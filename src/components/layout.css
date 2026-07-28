@@ -125,6 +125,107 @@ blockquote p {
     padding: 0rem 0.5rem;
 }
 
+.food-search {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: solid thin #ccc;
+    border-radius: 0.3rem;
+}
+
+.food-search:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.food-search-empty {
+    color: #999;
+}
+
+.food-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.food-tile {
+    display: flex;
+    flex-direction: column;
+    border: solid thin #eee;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px .2em #eee;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.food-tile:hover {
+    box-shadow: 2px 2px .4em #ddd;
+    transform: translateY(-2px);
+}
+
+.food-tile-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    line-height: 1.5;
+}
+
+.food-tile-title {
+    margin: 0 0 0.2rem;
+    font-size: 1.1rem;
+}
+
+.food-tile-date {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.food-tile-excerpt {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.food-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: none;
+    border-bottom: solid thin #eee;
+}
+
+.food-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf6f0;
+    font-size: 2.5rem;
+}
+
+.food-post .food-image {
+    height: 280px;
+    border-radius: 0.3rem;
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.food-post-title {
+    margin-bottom: 0.2rem;
+}
+
+.food-post-date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
 /*
 PrismJS theme overrides
  */
