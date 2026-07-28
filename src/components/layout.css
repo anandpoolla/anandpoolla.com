@@ -1,5 +1,5 @@
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: medium;
     color: #444444;
     line-height: 2;
@@ -26,12 +26,6 @@ footer {
 }
 
 h1, h2, h3 {
-    font-family: Karla, serif;
-}
-
-.food-page h1,
-.food-page h2,
-.food-page h3 {
     font-family: "Open Sans", sans-serif;
 }
 

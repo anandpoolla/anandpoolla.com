@@ -104,7 +104,6 @@ module.exports = {
         fonts: [
           `IBM Plex Mono\:400,700`,
           `Karla\:400,700`,
-          `Montserrat|:400,700`,
           `Open Sans\:400,700`
         ],
       },
