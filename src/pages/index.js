@@ -13,14 +13,30 @@ const IndexPage = () => (
     ]}
   >
     <SEO title="Home" />
-    <h2>Welcome to my sandbox...</h2>
+    <div className="hero">
+      <p className="hero-eyebrow">Welcome to my sandbox</p>
+      <h1 className="hero-title">Hi, I'm Anand.</h1>
+      <p className="hero-subtitle">
+        I am a software engineer with a love for spicy food and technology. You will find both of them here!
+      </p>
+    </div>
+
+    <div className="section-cards">
+      <Link className="section-card" to="/food">
+        <h2>Food</h2>
+        <p>Home-style South Indian recipes and cooking experiments.</p>
+      </Link>
+      <Link className="section-card" to="/tech">
+        <h2>Tech</h2>
+        <p>Guides and projects from building this site and others.</p>
+      </Link>
+      <Link className="section-card" to="/about">
+        <h2>About</h2>
+        <p>Who I am, where I've been, and how to reach me.</p>
+      </Link>
+    </div>
+
     <div>
-      I am a software engineer with a love for spicy food and technology. You will find both of them here!
-
-      <br/><br/>
-      On the technology side, you will soon find a guide below. It will list the steps needed to build this website
-      using the latest in web technologies, for free (except the domain name of course.)<br/><br/>
-
       Regarding food, I will be adding tons of recipes to this site. I have two goals in doing this:
       <ul>
         <li>Showcase my favorite foods and my cooking experiments</li>
@@ -30,6 +46,9 @@ const IndexPage = () => (
 
     <h2>Guide</h2>
     <div>
+      On the technology side, you will find a guide below. It lists the steps needed to build this website
+      using the latest in web technologies, for free (except the domain name of course.)<br/><br/>
+
       <Link to="/build-this-gatsby-website">Build this Gatsby website</Link><br/><br/>
 
       This guide will be an evolving document as this site evolves; I will try and capture the timeline as I go along.

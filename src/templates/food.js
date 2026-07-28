@@ -33,6 +33,9 @@ export default function FoodTemplate({
     )
   }
 
+  // Every recipe body opens with a "# Title" heading duplicating frontmatter.title, which we render separately above.
+  const contentHtml = html.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>/, "")
+
   return (
     <Layout
       menuItems={[
@@ -48,7 +51,7 @@ export default function FoodTemplate({
           <div className="food-post-date">{frontmatter.date}</div>
           <div
             className="food-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
       </div>
