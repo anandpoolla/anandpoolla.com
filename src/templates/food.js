@@ -8,7 +8,6 @@ export default function FoodTemplate({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
     <div className="food-post-container">
       <div className="food-post">
         <div
@@ -17,7 +16,6 @@ export default function FoodTemplate({
         />
       </div>
     </div>
-    </Layout>
   )
 }
 

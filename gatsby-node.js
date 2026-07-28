@@ -38,6 +38,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: techPostTemplate,
       context: {
         // additional data can be passed via context
+        id: edge.node.id,
         slug: edge.node.frontmatter.slug,
       },
     })
