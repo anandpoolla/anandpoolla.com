@@ -12,7 +12,20 @@ export default function TechPage() {
           ]}
         >
             <h1>Nerd stuff</h1>
-            <div>Projects — coming soon.</div>
+
+            <h2>Projects</h2>
+            <div className="tech-tiles">
+              <Link className="frame tech-tile" to="/tech/knight-moves">
+                <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+                <div className="tech-tile-image" role="img" aria-label="Knight Moves">
+                  <span>♞</span>
+                </div>
+                <div className="tech-tile-body">
+                  <h3 className="tech-tile-title">Knight Moves</h3>
+                  <p className="tech-tile-excerpt">Place a knight on the board and try to cover every square — or let it play itself.</p>
+                </div>
+              </Link>
+            </div>
 
             <h2>Guide</h2>
             <div>

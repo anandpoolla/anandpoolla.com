@@ -134,6 +134,15 @@ export default function KnightMoves() {
           Place knight
         </button>
       </form>
+      <button
+        type="button"
+        className="btn btn-secondary"
+        onClick={playForMe}
+        disabled={!knight || isPlaying}
+      >
+        {isPlaying ? "Playing…" : "Play for me"}
+      </button>
+
       {error && <p className="knight-error">{error}</p>}
       {isVictory && (
         <p className="knight-victory">
@@ -143,15 +152,6 @@ export default function KnightMoves() {
       {isGameOver && (
         <p className="knight-game-over">Game Over — no legal moves remain.</p>
       )}
-
-      <button
-        type="button"
-        className="btn btn-secondary"
-        onClick={playForMe}
-        disabled={!knight || isPlaying}
-      >
-        {isPlaying ? "Playing…" : "Play for me"}
-      </button>
 
       <div className="knight-board-wrap">
         <div

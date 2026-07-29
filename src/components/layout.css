@@ -695,6 +695,73 @@ blockquote p { display: inline; }
     margin-bottom: 1rem;
 }
 
+/* — tech tiles — */
+.tech-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.tech-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+}
+
+.tech-tile:hover {
+    border-color: var(--color-accent);
+}
+
+.tech-tile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    background-color: var(--color-accent-100);
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.tech-tile-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    line-height: 1.5;
+}
+
+.tech-tile-title {
+    font-family: var(--font-heading);
+    font-weight: var(--font-heading-weight);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.3rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.tech-tile-excerpt {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+    .tech-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* — knight moves — */
 .knight-form {
     display: flex;
