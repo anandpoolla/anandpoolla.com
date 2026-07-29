@@ -19,7 +19,8 @@ const IndexPage = ({
       menuItems={[
         { label: "about", to: "/about", class: "parent" },
         { label: "food", to: "/food", class: "parent" },
-        { label: "tech", to: "/tech", class: "parent" }
+        { label: "tech", to: "/tech", class: "parent" },
+        { label: "business", to: "/business", class: "parent" },
       ]}
     >
       <SEO title="Home" />
@@ -27,22 +28,33 @@ const IndexPage = ({
       <section className="hero">
         <h1 className="display">
           <span className="line">Software engineer.</span>{" "}
-          <span className="line">Now: home cook.</span>
+          <span className="line">Now: Business Man.</span>
         </h1>
         <p className="sub">
-          I spent two decades writing software before I started spending just as much time in the
-          kitchen, documenting the South Indian recipes I grew up on. This is where I keep both — the
-          code, the projects, and the write-ups.
+          I spent two decades writing software before I decided to start my own
+          business. I make hot sauces and other things. I also love to cook.
+          This is where you'll find my journey — the code, the recipes, and my
+          company.
         </p>
         <div className="row">
-          <Link to="/tech" className="btn btn-primary">See my work</Link>
-          <Link to="/food" className="btn btn-ghost">Read the blog</Link>
+          <Link to="/about/resume" className="btn btn-primary">
+            See my work
+          </Link>
+          <Link to="/tech" className="btn btn-secondary">
+            Side projects
+          </Link>
+          <Link to="/food" className="btn btn-ghost">
+            Check out some South Indian recipes
+          </Link>
         </div>
       </section>
 
       <section className="sheet" aria-label="Anand Poolla — background">
         <div className="frame plate">
-          <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+          <i className="corner tl"></i>
+          <i className="corner tr"></i>
+          <i className="corner bl"></i>
+          <i className="corner br"></i>
           <header className="title-block">
             <span className="tb-title">Anand Poolla — background</span>
             <span className="tb-cell">AP-01</span>
@@ -90,7 +102,9 @@ const IndexPage = ({
               </tr>
             </tbody>
           </table>
-          <p className="sheet-note">Full history on the <Link to="/about">About page</Link>.</p>
+          <p className="sheet-note">
+            Full history on the <Link to="/about">About page</Link>.
+          </p>
         </div>
       </section>
 
@@ -99,17 +113,32 @@ const IndexPage = ({
         <hr className="caption-rule" />
         <div className="cells">
           <Link to="/tech" className="frame cell-frame">
-            <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+            <i className="corner tl"></i>
+            <i className="corner tr"></i>
+            <i className="corner bl"></i>
+            <i className="corner br"></i>
             <h2>The engineer</h2>
-            <p>Two decades of software work, plus the odd side project — like this site. Guides and projects live here.</p>
+            <p>
+              Two decades of software work, plus the odd side project — like
+              this site. Guides and projects live here.
+            </p>
           </Link>
           <Link to="/food" className="frame cell-frame">
-            <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+            <i className="corner tl"></i>
+            <i className="corner tr"></i>
+            <i className="corner bl"></i>
+            <i className="corner br"></i>
             <h2>The cook</h2>
-            <p>Home-style South Indian recipes, written the way I actually cook them.</p>
+            <p>
+              Home-style South Indian recipes, written the way I actually cook
+              them.
+            </p>
           </Link>
           <Link to="/about" className="frame cell-frame">
-            <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+            <i className="corner tl"></i>
+            <i className="corner tr"></i>
+            <i className="corner bl"></i>
+            <i className="corner br"></i>
             <h2>The story</h2>
             <p>Where I grew up, how I got here, and how to reach me.</p>
           </Link>
@@ -122,14 +151,23 @@ const IndexPage = ({
           <hr className="caption-rule" />
           <h2 className="split-title">Stocking the pantry</h2>
           <p className="note">
-            Before the recipes, the ingredients. A running list of what to keep stocked for South
-            Indian home cooking, and where to find it.
+            Before the recipes, the ingredients. A running list of what to keep
+            stocked for South Indian home cooking, and where to find it.
           </p>
-          <p className="note"><Link to="/food/pantry">Visit the pantry →</Link></p>
+          <p className="note">
+            <Link to="/food/pantry">Visit the pantry →</Link>
+          </p>
         </div>
         <figure className="frame split-figure">
-          <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
-          <div className="figure-placeholder" role="img" aria-label="Pantry photo coming soon">
+          <i className="corner tl"></i>
+          <i className="corner tr"></i>
+          <i className="corner bl"></i>
+          <i className="corner br"></i>
+          <div
+            className="figure-placeholder"
+            role="img"
+            aria-label="Pantry photo coming soon"
+          >
             <span>🧂 Pantry photo</span>
           </div>
         </figure>
@@ -138,24 +176,29 @@ const IndexPage = ({
       <section className="features">
         <span className="kicker">04 · From the blog</span>
         <hr className="caption-rule" />
-        <p className="intro">South Indian recipes, written the way I actually cook them.</p>
-        <div className="food-tiles">
-          {RecipeTiles}
-        </div>
+        <p className="intro">
+          South Indian recipes, written the way I actually cook them.
+        </p>
+        <div className="food-tiles">{RecipeTiles}</div>
       </section>
 
-      <section className="quote">
-        <figure>
-          <blockquote>“I am nevertheless curious and adventurous, especially so if I'm hosting guests.”</blockquote>
-          <figcaption>— Anand, on cooking for people</figcaption>
-        </figure>
-      </section>
+      {/*<section className="quote">*/}
+      {/*  <figure>*/}
+      {/*    <blockquote>*/}
+      {/*      “I am nevertheless curious and adventurous, especially so if I'm*/}
+      {/*      hosting guests.”*/}
+      {/*    </blockquote>*/}
+      {/*    <figcaption>— Anand, on cooking for people</figcaption>*/}
+      {/*  </figure>*/}
+      {/*</section>*/}
 
       <section className="close" id="contact">
         <span className="kicker">05 · Get in touch</span>
         <hr className="caption-rule" />
         <h3>Say hello</h3>
-        <p className="sub">Reach out about engineering, recipes, or just to say hi.</p>
+        <p className="sub">
+          Reach out about business, recipes, or just to say hi.
+        </p>
         <form
           className="signup"
           name="contact"
@@ -177,7 +220,9 @@ const IndexPage = ({
             aria-label="Email address"
             required
           />
-          <button type="submit" className="btn btn-primary">Send</button>
+          <button type="submit" className="btn btn-primary">
+            Send
+          </button>
         </form>
       </section>
     </Layout>
