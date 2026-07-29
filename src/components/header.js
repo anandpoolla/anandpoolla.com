@@ -3,20 +3,13 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ menuItems }) => (
-    <header>
-        <div>
-            <h1 style={{ margin: 0 }}>
-                <Link id="brand" to="/">
-                    &#127798; Anand Poolla
-                </Link>
-            </h1>
-        </div>
-        <div>
-            {menuItems.map((menu, key) =>
-                <Link className={menu.class} key={key} to={menu.to}>{menu.label}</Link>
-            )}
-        </div>
-    </header>
+    <nav className="nav">
+        <Link className="nav-brand" to="/">Anand Poolla</Link>
+        {menuItems.map((menu, key) =>
+            <Link className={menu.class} key={key} to={menu.to}>{menu.label}</Link>
+        )}
+        <Link className="btn btn-primary" to="/#contact">Say hello</Link>
+    </nav>
 )
 
 Header.propTypes = {

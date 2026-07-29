@@ -23,7 +23,8 @@ export default function Ingredient(props) {
   }
 
   return (
-    <div className="ingredient">
+    <div className="frame ingredient">
+      <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
       <div className="ingredient-name">{props.name}</div>
       <img className="ingredient-image" src={props.src}/>
       <div className="ingredient-symbols">

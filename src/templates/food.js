@@ -22,7 +22,8 @@ export default function FoodTemplate({
 
   if (preview) {
     return (
-      <Link className="food-tile" to={frontmatter.slug}>
+      <Link className="frame food-tile" to={frontmatter.slug}>
+        <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
         <FoodImage src={frontmatter.image} alt={frontmatter.title} />
         <div className="food-tile-body">
           <h2 className="food-tile-title">{frontmatter.title}</h2>
@@ -46,7 +47,10 @@ export default function FoodTemplate({
     >
       <div className="food-page food-post-container">
         <div className="food-post">
-          <FoodImage src={frontmatter.image} alt={frontmatter.title} />
+          <div className="frame food-post-image-frame">
+            <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+            <FoodImage src={frontmatter.image} alt={frontmatter.title} />
+          </div>
           <h1 className="food-post-title">{frontmatter.title}</h1>
           <div className="food-post-date">{frontmatter.date}</div>
           <div

@@ -102,9 +102,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `IBM Plex Mono\:400,700`,
-          `Karla\:400,700`,
-          `Open Sans\:400,700`
+          `Barlow\:400,500,700`,
+          `Barlow+Condensed\:400,600`
         ],
       },
     }

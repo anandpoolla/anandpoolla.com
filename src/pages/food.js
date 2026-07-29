@@ -29,6 +29,13 @@ const  FoodPage = ({
       >
         <div className="food-page">
           <h1>Recipes</h1>
+          <div>
+            I will be adding tons of recipes to this site. I have two goals in doing this:
+            <ul>
+              <li>Showcase my favorite foods and my cooking experiments</li>
+              <li>Capture traditional, home-style recipes of South India that are woefully underrepresented outside</li>
+            </ul>
+          </div>
           <input
             type="search"
             className="food-search"
