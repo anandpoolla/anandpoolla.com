@@ -47,10 +47,12 @@ export default function FoodTemplate({
     >
       <div className="food-page food-post-container">
         <div className="food-post">
-          <div className="frame food-post-image-frame">
-            <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
-            <FoodImage src={frontmatter.image} alt={frontmatter.title} />
-          </div>
+          {frontmatter.image && (
+            <div className="frame food-post-image-frame">
+              <i className="corner tl"></i><i className="corner tr"></i><i className="corner bl"></i><i className="corner br"></i>
+              <FoodImage src={frontmatter.image} alt={frontmatter.title} />
+            </div>
+          )}
           <h1 className="food-post-title">{frontmatter.title}</h1>
           <div className="food-post-date">{frontmatter.date}</div>
           <div
