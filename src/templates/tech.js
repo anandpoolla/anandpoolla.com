@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default function TechTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,6 +10,7 @@ export default function TechTemplate({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
+    <SEO title={frontmatter.title} category="Tech" />
     <div className="tech-post-container">
       <div className="tech-post">
         <div

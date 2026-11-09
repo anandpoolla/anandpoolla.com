@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 function FoodImage({ src, alt }) {
   if (src) {
@@ -45,6 +46,7 @@ export default function FoodTemplate({
         { label: "food", to: "/food", class: "child" },
       ]}
     >
+      <SEO title={frontmatter.title} category="Food" />
       <div className="food-page food-post-container">
         <div className="food-post">
           {frontmatter.image && (
